@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        var velox = _speed * Input.GetAxisRaw("Horizontal");    //veloxに速度×左右の矢印キーの入力
+        var velox = _speed * 100 * Input.GetAxisRaw("Horizontal") * Time.deltaTime;    //veloxに速度×左右の矢印キーの入力
 
         if (isOnGround)
         {
@@ -38,7 +38,7 @@ public class PlayerMove : MonoBehaviour
 
     void Jump()
     {
-        _rb.AddForce(new Vector3(0f, _upForce, 0f));
+        _rb.AddForce(new Vector3(0f, _upForce * 100 * Time.deltaTime, 0f));
     }
 
 
