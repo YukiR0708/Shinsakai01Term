@@ -17,13 +17,13 @@ public class SceneChange : MonoBehaviour
 
     public void LoadGameScene() //ゲームシーンへ移動
     {
-        FadeManager.Instance.LoadScene("MainGame", 1.0f);
+        SceneManager.LoadScene("MainGame");
 
     }
 
     public void LoadTitle() //タイトルへ移動
     {
-        FadeManager.Instance.LoadScene("TitleScene", 1.0f);
+        SceneManager.LoadScene("TitleScene");
     }
 
     public void GameEnd()   //ゲーム終了
