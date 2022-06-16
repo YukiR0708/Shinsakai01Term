@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using DG.Tweening;
 using UnityEngine.UI;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
@@ -46,20 +46,6 @@ public class SceneChange : MonoBehaviour
             //ImageのColorは透明に設定
         }
     }
-
-
-
-    //public void LoadGameScene(string scene) //ゲームシーンへ移動
-    //{
-    //    SceneManager.LoadScene("MainGame");
-
-    //}
-
-    //public void LoadTitle() //タイトルへ移動
-    //{
-    //    SceneManager.LoadScene("TitleScene");
-    //}
-
 
 
     public void GameEnd()   //ゲーム終了
