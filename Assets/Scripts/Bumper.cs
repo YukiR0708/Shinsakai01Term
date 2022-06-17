@@ -24,6 +24,8 @@ public class Bumper : MonoBehaviour
         _audioSource = gameObject.GetComponent<AudioSource>();
     }
 
+
+
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Ball")

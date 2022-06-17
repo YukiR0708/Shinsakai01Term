@@ -10,50 +10,37 @@ public class PlayerMove : MonoBehaviour
 
     Rigidbody _rb;
 
-    [Header("ジャンプ力")]
-    [SerializeField] float _upForce;
+    private Animator _animator;
 
-    bool isOnGround = false;
 
     void Start()
     {
         _rb = gameObject.GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
+
     }
+
+
 
     void Update()
     {
-        var velox = _speed * 100 * Input.GetAxisRaw("Horizontal") * Time.deltaTime;    //veloxに速度×左右の矢印キーの入力
+        var velox = _speed * 100 * Input.GetAxisRaw("Horizontal");    //veloxに速度×左右の矢印キーの入力
+        _rb.AddForce(new Vector3(velox, 0f, 0f));   //ｘ軸方向に左右移動
 
-        if (isOnGround)
+        if (_animator != null)
         {
-            _rb.AddForce(new Vector3(velox, 0f, 0f));   //ｘ軸方向に左右移動
-        }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _animator.SetBool("BoBump", true);
+            }
 
-        if (Input.GetKeyDown("space") && isOnGround)    //スペースキーを押す かつ 地面に着いていたら→二段ジャンプ防止
-        {
-            Jump(); //ジャンプする
-            isOnGround = false;
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                _animator.SetBool("BoBump", false);
+            }
         }
     }
 
-    void Jump()
-    {
-        _rb.AddForce(new Vector3(0f, _upForce * 100 * Time.deltaTime, 0f));
-    }
-
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))  //着地判定
-        {
-            isOnGround = true;
-
-        }
-        else if (collision.gameObject.CompareTag("Ball"))    //ボールに当たった時y軸マイナスにAddForceする
-        {                                                       //ボールに乗ったとき上に飛ばされない為
-            _rb.AddForce(new Vector3(0f, -100f, 0f));
-        }
-    }
 }
 
 

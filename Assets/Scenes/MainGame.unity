@@ -180,8 +180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &4400929
 AudioSource:
   m_ObjectHideFlags: 0
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &5044294
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1000,8 +1000,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &78385451
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1767,8 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad5b914ef310df4f881e21c0f862350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
-  _upForce: 400
+  _speed: 60
 --- !u!54 &152146682
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1777,13 +1776,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3132827567353025591}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!81 &152146685
 AudioListener:
@@ -2055,8 +2054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &212877745
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2488,8 +2487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &278543405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,8 +2767,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &293477192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6960773324846612284, guid: 86fd8e596d1c632409cd5acbf0796045, type: 3}
@@ -3124,8 +3123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &323488729
 GameObject:
   m_ObjectHideFlags: 0
@@ -4465,8 +4464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &583495281
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5290,7 +5289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
+  _bounceMin: 10
   _bounceMax: 10
 --- !u!82 &700546652
 AudioSource:
@@ -6172,8 +6171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &794016064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7881339836439448521, guid: 86fd8e596d1c632409cd5acbf0796045, type: 3}
@@ -6521,7 +6520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
+  _bounceMin: 10
   _bounceMax: 10
 --- !u!82 &809775632
 AudioSource:
@@ -7088,7 +7087,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh148484
+  m_Name: pb_Mesh23888
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7402,8 +7401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &875423483
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8430,8 +8429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &983450906
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8685,8 +8684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &1016912155
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8991,7 +8990,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh149522
+  m_Name: pb_Mesh24278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9700,8 +9699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &1110233287
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10287,7 +10286,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh149716
+  m_Name: pb_Mesh24370
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10793,8 +10792,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &1214507038
 GameObject:
   m_ObjectHideFlags: 0
@@ -11431,8 +11430,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &1321891799 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3768377780376398883, guid: 86fd8e596d1c632409cd5acbf0796045, type: 3}
@@ -11461,6 +11460,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 497472120}
     m_Modifications:
+    - target: {fileID: 347741322908335669, guid: a9ca23b685b62e94e84d2035d0cf417d, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 347741322908335669, guid: a9ca23b685b62e94e84d2035d0cf417d, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -11549,8 +11552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &1349319794
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12192,7 +12195,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh149758
+  m_Name: pb_Mesh24404
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13134,6 +13137,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 497472120}
     m_Modifications:
+    - target: {fileID: 347741322908335669, guid: a9ca23b685b62e94e84d2035d0cf417d, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 631475601059415042, guid: a9ca23b685b62e94e84d2035d0cf417d, type: 3}
       propertyPath: m_Name
       value: MovPlayerChaser1
@@ -14188,7 +14195,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh150016
+  m_Name: pb_Mesh24508
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14753,6 +14760,7 @@ GameObject:
   - component: {fileID: 1864250433}
   - component: {fileID: 1864250432}
   - component: {fileID: 1864250431}
+  - component: {fileID: 1864250438}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -14768,7 +14776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864250429}
   m_LocalRotation: {x: -0.009142975, y: 0.000039718157, z: 0.004343899, w: 0.9999488}
-  m_LocalPosition: {x: 0.8325438, y: 24.25, z: -65.66}
+  m_LocalPosition: {x: 0.8325438, y: 24.25, z: -64.62}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -14916,8 +14924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad5b914ef310df4f881e21c0f862350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
-  _upForce: 300
+  _speed: 40
 --- !u!54 &1864250436
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14926,13 +14933,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864250429}
   serializedVersion: 2
-  m_Mass: 2
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 116
   m_CollisionDetection: 1
 --- !u!64 &1864250437
 MeshCollider:
@@ -14948,6 +14955,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!95 &1864250438
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864250429}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 616cc83e101b48f499ad14283e6009f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1877199619 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4381602515150361735, guid: 86fd8e596d1c632409cd5acbf0796045, type: 3}
@@ -15263,8 +15290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &1939419979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3768377781577130273, guid: 86fd8e596d1c632409cd5acbf0796045, type: 3}
@@ -15513,8 +15540,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!82 &1961002110
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15903,8 +15930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _kickedSE: {fileID: 8300000, guid: 4640685cf5c35a94d955f4c6ea0e2a97, type: 3}
-  _bounceMin: 5
-  _bounceMax: 10
+  _bounceMin: 3
+  _bounceMax: 7
 --- !u!1 &1996092099
 GameObject:
   m_ObjectHideFlags: 0
@@ -17418,7 +17445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3132827567353025591}
   m_LocalRotation: {x: -0.009142975, y: 0.000039718157, z: 0.004343899, w: 0.9999488}
-  m_LocalPosition: {x: 0.8325438, y: 24.18, z: -69.88}
+  m_LocalPosition: {x: 0.8325438, y: 24.18, z: -68.7}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -17443,6 +17470,7 @@ GameObject:
   - component: {fileID: 6792033579771199425}
   - component: {fileID: 6792033579771199426}
   - component: {fileID: 6792033579771199427}
+  - component: {fileID: 6792033579771199428}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -17941,6 +17969,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &6792033579771199428
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3132827567353025591}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 616cc83e101b48f499ad14283e6009f2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7349278528543065999
 GameObject:
   m_ObjectHideFlags: 0
