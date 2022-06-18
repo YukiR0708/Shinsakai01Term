@@ -27,16 +27,16 @@ public class PlayerMove : MonoBehaviour
         var velox = _speed * 100 * Input.GetAxisRaw("Horizontal");    //veloxに速度×左右の矢印キーの入力
         _rb.AddForce(new Vector3(velox, 0f, 0f));   //ｘ軸方向に左右移動
 
-        if (_animator != null)
+        if (_animator != null)  //nullチェック
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))    //スペースが押されたら
             {
-                _animator.SetBool("BoBump", true);
+                _animator.SetTrigger("TrBump");
             }
 
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space))  //スペースが離されたら
             {
-                _animator.SetBool("BoBump", false);
+                _animator.SetTrigger("TrBumped");
             }
         }
     }
