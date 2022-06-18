@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
 
-    [Header("プレイヤーの移動速度")]
-    [SerializeField] float _speed;
+    [Header("プレイヤーの移動速度"), SerializeField] float _speed;
 
     Rigidbody _rb;
 
@@ -17,15 +16,15 @@ public class PlayerMove : MonoBehaviour
     {
         _rb = gameObject.GetComponent<Rigidbody>();
         _animator = GetComponent<Animator>();
-
     }
 
 
 
     void Update()
     {
-        var velox = _speed * 100 * Input.GetAxisRaw("Horizontal");    //veloxに速度×左右の矢印キーの入力
-        _rb.AddForce(new Vector3(velox, 0f, 0f));   //ｘ軸方向に左右移動
+        var velox = _speed * Time.deltaTime * Input.GetAxisRaw("Horizontal");    //veloxに速度×左右の矢印キーの入力
+
+        _rb.AddForce(new Vector3(velox * 10000, 0f, 0f));   //ｘ軸方向に左右移動
 
         if (_animator != null)  //nullチェック
         {

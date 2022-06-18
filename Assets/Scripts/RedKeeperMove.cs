@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RedKeeperMove : MonoBehaviour
 {
-    [Header("キーパーの移動速度")]
-    [SerializeField] float _speed;
+    [Header("キーパーの移動速度"), SerializeField] float _speed;
     Rigidbody _rb;
 
     void Start()

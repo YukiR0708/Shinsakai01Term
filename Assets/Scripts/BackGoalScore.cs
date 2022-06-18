@@ -9,8 +9,9 @@ public class BackGoalScore : MonoBehaviour
 {
     AudioSource _audioSource;
 
-    [Header("青スコア時のSE")]
-    [SerializeField] AudioClip _blueScoreSE;
+    [Header("青スコア時のSE"), SerializeField] AudioClip _blueScoreSE;
+
+    [Header("敗北条件点数"), SerializeField] int _forLoseScore;
 
     int _blueScore;
     Text _textScore;
@@ -33,11 +34,11 @@ public class BackGoalScore : MonoBehaviour
     {
         _blueScore++;   //スコア加算
 
-        if (_blueScore < 5)
+        if (_blueScore < _forLoseScore)
         {
             SetScoreText(_blueScore);   //スコア表示
         }
-        else if (_blueScore == 5)   //5点になったら
+        else if (_blueScore == _forLoseScore)   //_forLoseScore点になったら
         {
             SetScoreText(_blueScore);   //スコア表示
             SceneManager.LoadScene("LoseScene");    //敗北シーンへ移動

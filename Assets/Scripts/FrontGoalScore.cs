@@ -9,9 +9,9 @@ public class FrontGoalScore : MonoBehaviour
 {
     AudioSource _audioSource;
 
-    [Header("赤スコア時のSE")]
-    [SerializeField] AudioClip _redScoreSE;
+    [Header("赤スコア時のSE"), SerializeField] AudioClip _redScoreSE;
 
+    [Header("勝利条件点数"), SerializeField] int _forWinScore;
     int _redScore;
     Text _textScore;
 
@@ -33,12 +33,12 @@ public class FrontGoalScore : MonoBehaviour
     {
         _redScore++;    //スコア加算
 
-        if (_redScore < 5)
+        if (_redScore < _forWinScore)
         {
             SetScoreText(_redScore);    //スコア表示
 
         }
-        else if (_redScore == 5)    //５点になったら
+        else if (_redScore == _forWinScore)    //_forWinScore点になったら
         {
             SetScoreText(_redScore);    //スコア表示
             SceneManager.LoadScene("WinScene");     //勝利シーンへ移動

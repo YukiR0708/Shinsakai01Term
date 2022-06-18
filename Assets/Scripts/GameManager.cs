@@ -16,11 +16,9 @@ public class GameManager : MonoBehaviour
     NavMeshAgent _movChaser2_agent;
 
     float _totalTime;        //　トータル制限時間
-    [Header("制限時間（分）"),SerializeField]  int _minute;
-
-    [Header("制限時間（秒）"),SerializeField]  float _seconds;
-
-    float _oldSeconds;       //　前回Update時の秒数
+    [Header("制限時間（分）"), SerializeField] int _minute;
+    [Header("制限時間（秒）"), SerializeField] float _seconds;
+    [Tooltip("前回Update時の秒数")] float _oldSeconds;
     Text _timerText;
 
 
@@ -44,6 +42,31 @@ public class GameManager : MonoBehaviour
         {
             _movChaser1_agent.enabled = true;   //MovPlayerChaser1がボールを追う
             _movChaser2_agent.enabled = true;   //MovPlayerChaser2がボールを追う
+
+            if (_totalTime <= 0f)    //　残り時間が0秒以下なら引き分けシーンへ移動
+            {
+                SceneManager.LoadScene("DrawScene");
+
+            }
+
+            _totalTime = _minute * 60 + _seconds;  //　一旦インスペクターから受け取ったトータルの制限時間（秒）を計算；
+            _totalTime -= Time.deltaTime;
+
+
+            _minute = (int)_totalTime / 60;   //　再設定
+            _seconds = _totalTime - _minute * 60;
+
+
+            if ((int)_seconds != (int)_oldSeconds)    //　タイマー表示用UIテキストに時間を表示する
+            {
+                _timerText.text = "制限時間：" + _minute.ToString("0") + "分" + ((int)_seconds).ToString("00") + "秒";
+            }
+
+
+            _oldSeconds = _seconds;
+
+
+
         }
         //ルールパネルがアクティブなら
         else
@@ -52,34 +75,7 @@ public class GameManager : MonoBehaviour
             _movChaser2_agent.enabled = false;   //MovPlayerChaser2がボールを追わない
         }
 
-        
-        if (_totalTime <= 0f)    //　制限時間が0秒以下なら引き分けシーンへ移動
-        {
-            SceneManager.LoadScene("DrawScene");     
 
-        }
-
-        _totalTime = _minute * 60 + _seconds;  //　一旦トータルの制限時間を計測；
-        _totalTime -= Time.deltaTime;
-
-        
-        _minute = (int)_totalTime / 60;   //　再設定
-        _seconds = _totalTime - _minute * 60;
-
-        
-        if ((int)_seconds != (int)_oldSeconds)    //　タイマー表示用UIテキストに時間を表示する
-        {
-            _timerText.text = "制限時間：" + _minute.ToString("0") + "分" + ((int)_seconds).ToString("00") + "秒";
-        }
-
-
-        _oldSeconds = _seconds;
-        
-
-        if (_totalTime <= 0f)    //　制限時間以下になったらコンソールに『制限時間終了』という文字列を表示する
-        {
-            Debug.Log("制限時間終了");
-        }
     }
 }
 

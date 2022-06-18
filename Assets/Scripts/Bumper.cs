@@ -7,14 +7,11 @@ public class Bumper : MonoBehaviour
 
     AudioSource _audioSource;
 
-    [Header("蹴った時のSE")]
-    [SerializeField] AudioClip _kickedSE;
+    [Header("蹴った時のSE"), SerializeField] AudioClip _kickedSE;
 
-    [Header("跳ね返り速度の最小値")]
-    [SerializeField] float _bounceMin;
+    [Header("跳ね返り速度の最小値"), SerializeField] float _bounceMin;
 
-    [Header("跳ね返り速度の最大値")]
-    [SerializeField] float _bounceMax;
+    [Header("跳ね返り速度の最大値"), SerializeField] float _bounceMax;
 
     float _bounce;
 

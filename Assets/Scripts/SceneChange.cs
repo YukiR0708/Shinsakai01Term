@@ -9,11 +9,9 @@ public class SceneChange : MonoBehaviour
 {
     AudioSource _audioSource;
 
-    [Header("ゲーム終了時のSE")]
-    [SerializeField] AudioClip _exitSE;
+    [Header("ゲーム終了時のSE"), SerializeField] AudioClip _exitSE;
 
-    [Header("フェード用イメージ")]
-    [SerializeField] Image _fadeImage;
+    [Header("フェード用イメージ"), SerializeField] Image _fadeImage;
 
     void Start()
     {
