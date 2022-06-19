@@ -46,13 +46,18 @@ public class BackGoalScore : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)     //ボールがゴール内の透明パネルにすり抜けたら
+    void OnTriggerEnter(Collider other)  //ボールがゴール内の透明パネルに当たったら
     {
-        if (other.gameObject.tag == "Ball")
+        if (other.gameObject.CompareTag("Ball"))
         {
             Destroy(other); //ボールを消す
-            AddScoreText(); //スコアを加算する
-            _audioSource.PlayOneShot(_blueScoreSE);  //青スコア時のSEを鳴らす
+            Invoke(nameof(AddScore), 0.5f);
         }
+    }
+
+    void AddScore()
+    {
+        AddScoreText(); //スコアを加算する
+        _audioSource.PlayOneShot(_blueScoreSE);  //青スコア時のSEを鳴らす
     }
 }

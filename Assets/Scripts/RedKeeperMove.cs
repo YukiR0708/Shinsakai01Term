@@ -17,12 +17,12 @@ public class RedKeeperMove : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             var veloxLeft = _speed;
-            _rb.AddForce(new Vector3(-veloxLeft, 0f, 0f));  //左シフトキーで左へ移動
+            _rb.AddForce(-veloxLeft, 0f, 0f);  //左シフトキーで左へ移動
         }
         else if (Input.GetKey(KeyCode.RightShift))
         {
             var veloxRight = _speed;
-            _rb.AddForce(new Vector3(veloxRight, 0f, 0f));  //右シフトキーで右へ移動
+            _rb.AddForce(veloxRight, 0f, 0f);  //右シフトキーで右へ移動
         }
     }
 }

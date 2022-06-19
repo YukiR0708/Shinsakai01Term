@@ -19,7 +19,7 @@ public class RespawnManager : MonoBehaviour
         _rulePanel = GameObject.Find("RulePanel");
     }
 
-    void Update()
+    void FixedUpdate()
     {
         GameObject ballObj = GameObject.Find("SoccerBall"); //サッカーボールを探す
         if (ballObj == null && !_rulePanel.activeSelf)  //サッカーボールがなくてルールパネルが非表示のとき

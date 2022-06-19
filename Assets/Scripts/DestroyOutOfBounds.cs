@@ -5,12 +5,11 @@ using UnityEngine;
 public class DestroyOutOfBounds : MonoBehaviour
 {
     public static DestroyOutOfBounds instance;
-    private float leftLimit = 0.1f;
-    private float rightLimit = 10.5f;
-    private float bottomLimit = -19.0f;
-    private float topLimit = -0.3f;
-    private float field = -2.618224f;
-//    public bool judgement;
+    [Header("¶‚ÌŒÀŠE"), SerializeField] float leftLimit;
+    [Header("‰E‚ÌŒÀŠE"), SerializeField] float rightLimit;
+    [Header("è‘O‚ÌŒÀŠE"), SerializeField] float bottomLimit;
+    [Header("‰œ‚ÌŒÀŠE"), SerializeField] float topLimit;
+    float field = -2.618224f;
 
 
     public void Awake()

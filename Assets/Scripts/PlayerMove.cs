@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     {
         var velox = _speed * Time.deltaTime * Input.GetAxisRaw("Horizontal");    //veloxに速度×左右の矢印キーの入力
 
-        _rb.AddForce(new Vector3(velox * 10000, 0f, 0f));   //ｘ軸方向に左右移動
+        _rb.AddForce(velox * 10000, 0f, 0f);   //ｘ軸方向に左右移動
 
         if (_animator != null)  //nullチェック
         {

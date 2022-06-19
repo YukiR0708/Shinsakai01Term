@@ -13,12 +13,11 @@ public class Bumper : MonoBehaviour
 
     [Header("跳ね返り速度の最大値"), SerializeField] float _bounceMax;
 
-    float _bounce;
+    public float _bounce;
 
     void Start()
     {
-        _bounce = Random.Range(_bounceMin, _bounceMax);    //跳ね返り速度をランダムにする
-        _audioSource = gameObject.GetComponent<AudioSource>();
+        _audioSource = gameObject.AddComponent<AudioSource>();
     }
 
 
@@ -27,8 +26,10 @@ public class Bumper : MonoBehaviour
     {
         if (other.gameObject.tag == "Ball")
         {
-            other.rigidbody.AddForce(0f, _bounce / 10, _bounce, ForceMode.Impulse);    //ボールを跳ね返す
-            _audioSource.PlayOneShot(_kickedSE); //蹴ったときのSEを鳴らす
+            _bounce = Random.Range(_bounceMin, _bounceMax) * Time.deltaTime * 50;    //跳ね返り速度をランダムにする]
+            Debug.Log($"跳ね返り速度は{_bounce}");
+            other.rigidbody.AddForce(0f, _bounce/10, _bounce, ForceMode.Impulse);    //ボールを跳ね返す
+            _audioSource.PlayOneShot(_kickedSE, 0.3f); //蹴ったときのSEを鳴らす
         }
     }
 
