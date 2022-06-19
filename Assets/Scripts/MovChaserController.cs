@@ -7,7 +7,7 @@ public class MovChaserController : MonoBehaviour
 {
     NavMeshAgent _agent;
     GameObject _ball;
-    GameObject _goal;
+    GameObject _player;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class MovChaserController : MonoBehaviour
     void Update()
     {
         _ball = GameObject.FindGameObjectWithTag("Ball");
-        _goal = GameObject.Find("backGoal");
+        _player = GameObject.Find("Player");
 
         if (_agent.enabled && _ball != null) //追跡モブがアクティブでボールがあるとき
         {
@@ -25,7 +25,7 @@ public class MovChaserController : MonoBehaviour
         }
         else if (_agent.enabled && _ball == null) //追跡モブがアクティブでボールがないとき
         {
-            _agent.destination = _goal.transform.position;  //ゴールに向かう
+            _agent.destination = _player.transform.position;  //プレイヤーに向かう
         }
     }
 }

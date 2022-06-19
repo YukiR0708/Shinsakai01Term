@@ -40,6 +40,7 @@ public class FrontGoalScore : MonoBehaviour
         }
         else if (_redScore == _forWinScore)    //_forWinScore点になったら
         {
+
             SetScoreText(_redScore);    //スコア表示
             SceneManager.LoadScene("WinScene");     //勝利シーンへ移動
         }
@@ -56,7 +57,7 @@ public class FrontGoalScore : MonoBehaviour
 
     void AddScore()
     {
-        AddScoreText(); //スコアを加算する
         _audioSource.PlayOneShot(_redScoreSE);  //SEを鳴らす
+        AddScoreText(); //スコアを加算する
     }
 }

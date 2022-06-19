@@ -57,7 +57,7 @@ public class BackGoalScore : MonoBehaviour
 
     void AddScore()
     {
-        AddScoreText(); //スコアを加算する
         _audioSource.PlayOneShot(_blueScoreSE);  //青スコア時のSEを鳴らす
+        AddScoreText(); //スコアを加算する
     }
 }
