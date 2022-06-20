@@ -50,7 +50,7 @@ public class FrontGoalScore : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            Destroy(other); //ボールを消す
+            Destroy(other.gameObject); //ボールを消す
             Invoke(nameof(AddScore), 0.5f);
         }
     }

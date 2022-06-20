@@ -50,7 +50,8 @@ public class BackGoalScore : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
-            Destroy(other); //ボールを消す
+            print("goal");
+            Destroy(other.gameObject); //ボールを消す
             Invoke(nameof(AddScore), 0.5f);
         }
     }
