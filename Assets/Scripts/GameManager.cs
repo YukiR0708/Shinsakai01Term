@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     Text _timerText;
     AudioSource _audioSource;
     [Header("引き分けホイッスルSE"), SerializeField] AudioClip _drawSE;
-    //    [Tooltip("タイムアップかどうか")] bool isTimeUp;
+//    [Tooltip("ゲーム中かどうか")] bool isGame;
 
 
     void Start()
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         _oldSeconds = 0f;
         _timerText = GameObject.Find("LeftTime").GetComponent<Text>();
         _audioSource = gameObject.AddComponent<AudioSource>();
-        //        isTimeUp = false;
+ //       isGame = false;
     }
 
 
@@ -55,6 +55,13 @@ public class GameManager : MonoBehaviour
                 _totalTime -= Time.deltaTime;   //カウントダウンする
             }
 
+            if (_totalTime <= 0f) //残り時間が0以下のとき
+            {
+                _movChaser1_agent.enabled = false;   //MovPlayerChaser1がボールを追わない
+                _movChaser2_agent.enabled = false;   //MovPlayerChaser2がボールを追わない
+            }
+
+
             if (_oldSeconds >= 0f && _totalTime < 0f)   //前のUpdateの残り時間が0以上かつ　今回のUpdateの残り時間が0未満のときだけ
             {
                 _audioSource.PlayOneShot(_drawSE, 0.3f);    //ホイッスルを鳴らす
@@ -62,11 +69,6 @@ public class GameManager : MonoBehaviour
                 Invoke(nameof(Draw), 2.0f); //引き分けシーン呼び出し
             }
 
-            if(_totalTime <= 0f) //残り時間が0以下のとき
-            {
-                _movChaser1_agent.enabled = false;   //MovPlayerChaser1がボールを追わない
-                _movChaser2_agent.enabled = false;   //MovPlayerChaser2がボールを追わない
-            }
 
             _minute = (int)_totalTime / 60;   //　再設定
             _seconds = _totalTime - _minute * 60;
@@ -81,7 +83,7 @@ public class GameManager : MonoBehaviour
             _oldSeconds = _seconds;
         }
 
-        else    //ルールパネルがアクティブなら
+        else  if(_rulePanel.activeSelf)//ルールパネルがアクティブなら
         {
             _movChaser1_agent.enabled = false;   //MovPlayerChaser1がボールを追わない
             _movChaser2_agent.enabled = false;   //MovPlayerChaser2がボールを追わない
