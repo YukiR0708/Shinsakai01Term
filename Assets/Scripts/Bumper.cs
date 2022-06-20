@@ -24,10 +24,10 @@ public class Bumper : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Ball")
+        if (other.gameObject.tag == "Ball" && _kickedSE !=　null)
         {
             _bounce = Random.Range(_bounceMin, _bounceMax) * Time.deltaTime * 50;    //跳ね返り速度をランダムにする]
-            Debug.Log($"跳ね返り速度は{_bounce}");
+//            Debug.Log($"跳ね返り速度は{_bounce}");
             other.rigidbody.AddForce(0f, _bounce/10, _bounce, ForceMode.Impulse);    //ボールを跳ね返す
             _audioSource.PlayOneShot(_kickedSE, 0.3f); //蹴ったときのSEを鳴らす
         }

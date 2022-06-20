@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
             if (_oldSeconds >= 0f && _totalTime < 0f)   //前のUpdateの残り時間が0以上かつ　今回のUpdateの残り時間が0未満のときだけ
             {
                 _audioSource.PlayOneShot(_drawSE, 0.3f);    //ホイッスルを鳴らす
-                Debug.Log("SEが1回鳴った");
+                //Debug.Log("SEが1回鳴った");
                 Invoke(nameof(Draw), 2.0f); //引き分けシーン呼び出し
             }
 
