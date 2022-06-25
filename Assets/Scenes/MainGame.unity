@@ -13239,8 +13239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31b61ca29e56bf049a67b8890b93b8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ballObj1: {fileID: 8395126373998690374, guid: 6366f632290c7d144ab49f77c1829f6d, type: 3}
-  _ballObj2: {fileID: 8395126373998690374, guid: c1e0b27425f6c3b459117c404b636029, type: 3}
   _respawnManager: {fileID: 278543405}
 --- !u!1 &1921801686 stripped
 GameObject:
