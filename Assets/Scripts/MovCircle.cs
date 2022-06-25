@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovCircle : MonoBehaviour
 {
-    [SerializeField] GameObject _Target;
-    [SerializeField] float _angle;
+    [Header("回転の中心オブジェクト"), SerializeField] GameObject _Target;
+    [Header("回転の角度"), SerializeField] float _angle;
 
     void Update()
     {

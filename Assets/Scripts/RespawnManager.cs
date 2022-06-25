@@ -43,7 +43,8 @@ public class RespawnManager : MonoBehaviour
         {
             GameObject newBall = Instantiate(_ballPrefabs); //中央にボールプレハブを生成する
             newBall.name = _ballPrefabs.name;   //オブジェクト名にcloneをつけないようにする
-        }   else
+        }
+        else if (count % 2 == 0)
         {
             GameObject newBall = Instantiate(_ballPrefabs2); //ゴール前にボールプレハブを生成する
             newBall.name = _ballPrefabs2.name;   //オブジェクト名にcloneをつけないようにする

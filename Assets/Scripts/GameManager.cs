@@ -9,10 +9,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    GameObject _rulePanel;
-    GameObject _movChaser1;
+    [Header("ルールパネル"), SerializeField] GameObject _rulePanel;
+    [Header("MovPlayerChaser1"), SerializeField] GameObject _movChaser1;
     NavMeshAgent _movChaser1_agent;
-    GameObject _movChaser2;
+    [Header("MovPlayerChaser2"), SerializeField] GameObject _movChaser2;
     NavMeshAgent _movChaser2_agent;
     [Tooltip("トータル制限時間")] float _totalTime;
     [Header("制限時間（分）"), SerializeField] int _minute;
@@ -26,10 +26,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        _rulePanel = GameObject.Find("RulePanel");
-        _movChaser1 = GameObject.Find("MovPlayerChaser1");
         _movChaser1_agent = _movChaser1.GetComponent<NavMeshAgent>();
-        _movChaser2 = GameObject.Find("MovPlayerChaser2");
         _movChaser2_agent = _movChaser2.GetComponent<NavMeshAgent>();
         _totalTime = _minute * 60 + _seconds;
         _oldSeconds = 0f;

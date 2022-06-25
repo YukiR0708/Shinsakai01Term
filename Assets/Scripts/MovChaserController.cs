@@ -7,7 +7,7 @@ public class MovChaserController : MonoBehaviour
 {
     NavMeshAgent _agent;
     GameObject _ball;
-    GameObject _player;
+    [Header("Player"), SerializeField] GameObject _player;
 
     void Start()
     {
@@ -17,7 +17,6 @@ public class MovChaserController : MonoBehaviour
     void Update()
     {
         _ball = GameObject.FindGameObjectWithTag("Ball");
-        _player = GameObject.Find("Player");
 
         if (_agent.enabled && _ball != null) //追跡モブがアクティブでボールがあるとき
         {

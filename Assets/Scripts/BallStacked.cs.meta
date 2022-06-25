@@ -3,7 +3,10 @@ guid: 31b61ca29e56bf049a67b8890b93b8ce
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _ballObj1: {instanceID: 0}
+  - _ballObj2: {instanceID: 0}
+  - _respawnManager: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
